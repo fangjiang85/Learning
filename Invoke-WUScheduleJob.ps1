@@ -10,7 +10,11 @@ param (
     [String]
     $ParameterName
 )
-
+ If (-not (Import-Module PSWindowsUpdate)){
+      
+      Install-Module PSWindowsUpdate -Force
+      
+    }     
 
 }
 
